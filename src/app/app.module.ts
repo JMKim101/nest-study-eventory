@@ -6,9 +6,10 @@ import { LoggerMiddleware } from '../common/middlewares/logger.middleware';
 import { RegionModule } from '../region/region.module';
 import { CommonModule } from '../common/common.module';
 import { CategoryModule } from 'src/category/category.module';
+import { ReviewModule } from '../review/review.module';
 
 @Module({
-  imports: [configModule, RegionModule, CommonModule, CategoryModule],
+  imports: [configModule, RegionModule, CommonModule, CategoryModule, ReviewModule],
   controllers: [AppController],
   providers: [AppService],
 })
