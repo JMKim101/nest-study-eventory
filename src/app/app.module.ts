@@ -7,9 +7,10 @@ import { RegionModule } from '../region/region.module';
 import { CommonModule } from '../common/common.module';
 import { CategoryModule } from 'src/category/category.module';
 import { ReviewModule } from '../review/review.module';
+import { UserModule } from '../user/user.module';
 
 @Module({
-  imports: [configModule, RegionModule, CommonModule, CategoryModule, ReviewModule],
+  imports: [configModule, RegionModule, CommonModule, CategoryModule, ReviewModule, UserModule],
   controllers: [AppController],
   providers: [AppService],
 })
