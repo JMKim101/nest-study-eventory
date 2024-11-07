@@ -8,6 +8,4 @@ export class CreateEventPayload {
     type: Number,
   })
   hostId!: number;
-
-  
 }
