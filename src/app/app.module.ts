@@ -8,6 +8,7 @@ import { CommonModule } from '../common/common.module';
 import { CategoryModule } from 'src/category/category.module';
 import { ReviewModule } from '../review/review.module';
 import { UserModule } from '../user/user.module';
+import { EventModule } from 'src/event/event.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { UserModule } from '../user/user.module';
     CategoryModule,
     ReviewModule,
     UserModule,
+    EventModule,
   ],
   controllers: [AppController],
   providers: [AppService],
