@@ -57,4 +57,13 @@ export class EventRepository {
       },
     });
   }
+
+  async addParticipant(eventId: number, userId:number): Promise<void> {
+    await this.prisma.eventJoin.create({
+      data: {
+        eventId: eventId,
+        userId: userId,
+      },
+    });
+  }
 }

@@ -43,7 +43,13 @@ export class EventService {
       maxPeople: payload.maxPeople,
     };
 
+    if (createData.startTime > createData.endTime) {
+      throw new ConflictException('종료 시간이 시작 시간보다 빠를 수 없습니다.')
+    }
+
     const event = await this.eventRepository.createEvent(createData);
+
+    await this.eventRepository.addParticipant(event.id, host.id);
 
     return EventDto.from(event);
   }
